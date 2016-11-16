@@ -28,7 +28,7 @@ class ViewController: UIViewController {
     }
     
     
-    @IBAction func loginClicked(sender: AnyObject) {
+    @IBAction func loginClicked(_ sender: AnyObject) {
         print("Something Should Be Working")
         let vc = VoiceItLogin(DEVELOPER_ID,userToken: userTokenField.text!,vpPhrase: "Never forget tomorrow is a new day", textConfidence: "30.0", confidence: "89" , contentLanguage: "en-US", callback: { (result) -> Void in
             print("Result is \(result)");
@@ -42,7 +42,7 @@ class ViewController: UIViewController {
             }
             
         })
-        self.presentViewController(vc, animated: true, completion: nil)
+        self.present(vc!, animated: true, completion: nil)
     }
     
     
